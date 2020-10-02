@@ -1,10 +1,11 @@
+require('dotenv').config()
 module.exports = {
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'scd72cvy7t3e',
-        accessToken: 'miSSRJtltvkCCYDn-mRnI1UT4s5SvmN2pY4alh6aYSU',
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         downloadLocal: true
       }
     },
